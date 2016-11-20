@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:background="@color/warnaColatMuda"
+        android:textColor="@color/colorAccent"
+        android:paddingTop="20px"
+        android:paddingBottom="20px"
+        android:textStyle="bold"
+        android:textSize="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/notifikasi"
+        android:layout_below="@+id/hasil"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Kalkulator Siap Digunakan" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="200px"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/warnaColatMuda">
+    <EditText
+        android:textColor="@color/colorAccent"
+        android:layout_width="300px"
+        android:layout_height="100px"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/masukan1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/operan"
+        android:layout_toLeftOf="@+id/operan"
+        android:layout_toStartOf="@+id/operan"
+        android:onClick="clearInput1"/>
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="     "
+        android:id="@+id/operan"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:gravity="center" />
+    <EditText
+        android:textColor="@color/colorAccent"
+        android:layout_width="300px"
+        android:layout_height="100px"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/masukan2"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/operan"
+        android:layout_alignBottom="@+id/operan"
+        android:layout_toRightOf="@+id/operan"
+        android:onClick="clearInput2"/>
+</LinearLayout>
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pilihan Operasi"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/hitung"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   +   "
+            android:id="@+id/tambah"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="klikTambah" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   -   "
+            android:id="@+id/kurang"
+            android:layout_alignTop="@+id/tambah"
+            android:layout_toRightOf="@+id/tambah"
+            android:layout_toEndOf="@+id/tambah"
+            android:onClick="klikKurang" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   x   "
+            android:id="@+id/kali"
+            android:layout_alignTop="@+id/kurang"
+            android:layout_toRightOf="@+id/kurang"
+            android:layout_toEndOf="@+id/kurang"
+            android:onClick="klikKali" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   :   "
+            android:id="@+id/bagi"
+            android:layout_alignTop="@+id/kali"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="klikBagi" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:id="@+id/hitung"
+        android:layout_below="@+id/masukan1"
+        android:layout_centerHorizontal="true"
+        android:onClick="klikHasil"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="80px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hasil Perhitungan ="
+        android:id="@+id/textView3"
+        android:layout_below="@+id/tambah"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="30px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/hasil"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/bagi"
+        android:layout_alignEnd="@+id/bagi"
+        android:gravity="right" />
+    </LinearLayout>
+    <EditText
+        android:paddingTop="50px"
+        android:background="@color/warnaColatMuda"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:id="@+id/noteText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="text"
+        android:ems="10"
+        android:gravity="top"
+        android:imeOptions="flagNoExtractUi"
+        android:hint="'Edit Hasil'"/>
+
+
+</LinearLayout>
